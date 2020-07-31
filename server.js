@@ -1,7 +1,9 @@
 const express = require('express')
-const path = require('path')
-const app = express()
-const port = 3000
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
+
+const app = express();
+const PORT = process.env.PORT || 3001;
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
